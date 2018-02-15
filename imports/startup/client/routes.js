@@ -16,6 +16,12 @@ FlowRouter.route('/', {
   },
 });
 
+FlowRouter.route('/home', {
+  action(params) {
+    FlowRouter.go('/', params);
+  }
+});
+
 FlowRouter.route('/portfolio', {
   name: 'portfolio',
   action() {
