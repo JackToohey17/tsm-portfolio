@@ -1,6 +1,6 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
-
+import { Portfolios } from '../../api/portfolios/portfolios.js';
 // Import needed templates
 import '../../ui/layouts/body/body.js';
 import '../../ui/pages/home/home.js';
@@ -16,23 +16,23 @@ FlowRouter.route('/', {
   },
 });
 
-FlowRouter.route('/home', {
+FlowRouter.route('/', {
   action(params) {
-    FlowRouter.go('/', params);
+    FlowRouter.go('/portfolios', params);
   }
 });
 
-FlowRouter.route('/portfolio', {
-  name: 'portfolio',
+FlowRouter.route('/portfolios', {
+  name: 'portfolios',
   action() {
-    BlazeLayout.render('App_body', { main: 'portfolio' });
+    BlazeLayout.render('App_body', { main: 'portfolios' });
   },
 });
 
-FlowRouter.route('/work', {
-  name: 'work',
-  action() {
-    BlazeLayout.render('App_body', { main: 'work' });
+FlowRouter.route('/portfolio/:_id', {
+  name: 'portfolio',
+  action(params) {
+    BlazeLayout.render('App_body', { main: 'portfolio' });
   },
 });
 

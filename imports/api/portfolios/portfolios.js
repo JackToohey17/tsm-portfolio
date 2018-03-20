@@ -9,7 +9,7 @@ export default Portfolios;
 Factory.define('portfolio', Portfolios, {
   title: () => faker.lorem.words(),
   description: () => faker.lorem.sentences(),
-  link: () => faker.lorem.words(),
+  link: () => 'https://www.google.com/',
   img: () => 'https://www.placecage.com/c/200/200',
   endDate: () => faker.date.past(),
 });
