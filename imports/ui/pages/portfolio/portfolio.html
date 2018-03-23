@@ -1,3 +1,17 @@
 <template name="portfolio">
-  {{ portfolio._id }}
+  <div class="jumbotron">
+    <h1 class="display-4">{{ portfolio.title }}</h1>
+    <p class="lead">{{ humanizeDate portfolio.endDate }}</p>
+    <hr class="my-4">
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href={{ portfolio.link }} role="button">More details</a>
+    </p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <p>{{ portfolio.description }}</p>
+      </div>
+    </div>
+  </div>
 </template>
