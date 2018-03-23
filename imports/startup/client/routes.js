@@ -6,6 +6,7 @@ import '../../ui/layouts/body/body.js';
 import '../../ui/pages/home/home.js';
 import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/portfolio/portfolio.js';
+import '../../ui/pages/portfolios/portfolios.js';
 import '../../ui/pages/work/work.js';
 
 // Set up all routes in the app

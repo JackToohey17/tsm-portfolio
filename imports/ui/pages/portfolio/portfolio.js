@@ -6,11 +6,11 @@ import './portfolio.html';
 
 
 Template.portfolio.onCreated(function() {
-  console.log(this);
+  // console.log(this);
 });
 
 Template.portfolio.onRendered(function() {
-  console.log(this);
+  // console.log(this);
 });
 
 Template.portfolio.helpers({
