@@ -9,9 +9,9 @@
             <div class="card-body" style="display: flex; flex-direction: column;">
               <h5 class="card-title">{{ portfolio.title }}</h5>
               <div style="flex-grow: 1;">
-                <p class="card-text">{{ portfolio.description }}</p>
+                <p class="card-text">{{ shortenDescription portfolio.description }}</p>
               </div>
-              <a href={{portfolio.link}} class="card-link"> Learn more </a>
+              <a href="/portfolio/{{portfolio._id}}" class="card-link"> Learn more </a>
             </div>
           </div>
         </div>
