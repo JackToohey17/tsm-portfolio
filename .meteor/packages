@@ -25,10 +25,11 @@ meteortesting:mocha               # A package for writing and running your meteo
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
 dburles:factory
 practicalmeteor:faker
+browser-policy
+momentjs:moment
 
 
 ##################################
 autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
 ##################################
-momentjs:moment

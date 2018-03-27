@@ -7,9 +7,9 @@ export const Portfolios = new Mongo.Collection('portfolios');
 export default Portfolios;
 
 Factory.define('portfolio', Portfolios, {
-  title: () => faker.lorem.word(),
+  title: () => faker.lorem.words(),
   description: () => faker.lorem.paragraphs(),
-  link: () => 'https://www.google.com/',
-  img: () => 'https://www.placecage.com/c/200/800',
+  link: () => 'http://totalrequestnow-testing.herokuapp.com/rd-app-view',
+  img: () => 'https://s3.amazonaws.com/myfangate.com/rdvote/trnow.png',
   endDate: () => faker.date.past(),
 });

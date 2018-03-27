@@ -10,12 +10,12 @@ import '../../ui/pages/portfolios/portfolios.js';
 import '../../ui/pages/work/work.js';
 
 // Set up all routes in the app
-FlowRouter.route('/', {
-  name: 'App.home',
-  action() {
-    BlazeLayout.render('App_body', { main: 'App_home' });
-  },
-});
+// FlowRouter.route('/', {
+//   name: 'App.home',
+//   action() {
+//     BlazeLayout.render('App_body', { main: 'App_home' });
+//   },
+// });
 
 FlowRouter.route('/', {
   action(params) {

@@ -2,15 +2,17 @@
   <div class="jumbotron">
     <h1 class="display-4">{{ portfolio.title }}</h1>
     <p class="lead">{{ humanizeDate portfolio.endDate }}</p>
-    <hr class="my-4">
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href={{ portfolio.link }} role="button">More details</a>
-    </p>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-12 col-md-6">
         <p>{{ portfolio.description }}</p>
+        <a href="{{portfolio.link}}" target="_blank" class="btn btn-info" role="button">View website</a>
+      </div>
+      <div class="col-12 col-md-6" style="text-align: center">
+        <iframe src="{{portfolio.link}}" width="320" height="580">
+          <p>Your browser does not support iframes.</p>
+        </iframe>
       </div>
     </div>
   </div>
