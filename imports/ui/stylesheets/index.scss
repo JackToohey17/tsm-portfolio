@@ -1,0 +1,21 @@
+$tsm-green: #1faf91;
+$tsm-purple: #7049ba;
+
+body {
+  background-color: $tsm-green;
+}
+
+.card-link {
+  color: $tsm-purple;
+  &:hover {
+    color: $tsm-purple;
+  }
+}
+
+.btn.btn-tsm {
+  background-color: $tsm-purple;
+  color: white;
+  &:hover {
+    background-color: $tsm-purple;
+  }
+}
