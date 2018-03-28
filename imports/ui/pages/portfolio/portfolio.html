@@ -1,13 +1,18 @@
 <template name="portfolio">
-  <div class="jumbotron">
+  <!-- <div class="jumbotron">
     <h1 class="display-4">{{ portfolio.title }}</h1>
     <p class="lead">{{ humanizeDate portfolio.endDate }}</p>
-  </div>
+  </div> -->
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6">
         <div class="card">
+          <h5 class="card-header">
+            {{ portfolio.title }}
+          </h5>
+          <img class="card-img-top" src={{ portfolio.img }} alt='Portolfio image'>
           <div class="card-body">
+            <p>{{ humanizeDate portfolio.endDate }}</p>
             <p>{{ portfolio.description }}</p>
             <a href="{{ portfolio.link }}" target="_blank" class="btn btn-tsm" role="button">View website</a>
           </div>
