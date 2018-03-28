@@ -18,3 +18,24 @@ Template.portfolio.helpers({
     return Portfolios.findOne({_id: FlowRouter.current().params._id});
   },
 });
+
+const handleIframeScroll = (event) => {
+  console.log("handleIframeScroll", event);
+  const $iframe = $(event.target).children("iframe");
+  const scrollTop = $iframe.scrollTop();
+  const {wheelDeltaY} = event;
+  // $iframe.scrollTop(wheelDeltaY + scrollTop);
+  document.getElementById('iframe').contentWindow.scrollTo(wheelDeltaY + scrollTop);
+  console.log(scrollTop, $iframe.scrollTop(), wheelDeltaY, $iframe);
+}
+
+Template.portfolio.events({
+  'mouseover .iframe-wrapper': (event, template) => {
+    console.log("mouseover", event);
+    window.addEventListener("wheel", handleIframeScroll);
+  },
+  'mouseout .iframe-wrapper': (event, template) => {
+    console.log("mouseout", event);
+    window.removeEventListener("wheel", handleIframeScroll);
+  }
+})
