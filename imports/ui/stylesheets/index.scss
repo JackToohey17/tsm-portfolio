@@ -27,3 +27,23 @@ body {
   color: white;
   border-radius: 0px;
 }
+
+$spacer: 20px;
+.iframe-wrapper{
+  background-image: url("/img/iphone_x_flat_mockup.png");
+  background-size: contain;
+  background-position: center center;
+  overflow: visible;
+  padding-left: $spacer;
+  margin-left: -$spacer;
+  padding-right: $spacer;
+  margin-right: -$spacer;
+  background-repeat: no-repeat;
+  padding-top: 45px;
+  pointer-events: none;
+  iframe {
+    position: relative;
+    z-index: -999;
+    pointer-events: all;
+  }
+}
