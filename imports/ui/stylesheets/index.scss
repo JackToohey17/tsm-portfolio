@@ -28,21 +28,69 @@ body {
   border-radius: 0px;
 }
 
-$spacer: 20px;
-.iframe-wrapper{
-  background-image: url("/img/iphone_x_flat_mockup.png");
-  background-size: contain;
-  background-position: center center;
-  overflow: visible;
-  padding-left: $spacer;
-  margin-left: -$spacer;
-  padding-right: $spacer;
-  margin-right: -$spacer;
-  background-repeat: no-repeat;
-  padding-top: 45px;
-  iframe {
-    position: relative;
-    z-index: -999;
-    pointer-events: all;
+/* IPHONE */
+$scale: 2;
+
+$screenWidth: 320px;
+$screenHeight: $screenWidth * 1.55;
+
+$sideWidth: $screenWidth / 13.5;
+$topBottom: $sideWidth * 6.5;
+
+.iphone {
+  background: #fcfcfc;
+  border-radius: $sideWidth * 2.5;
+  height: $screenHeight + $topBottom;
+  width: $screenWidth + $sideWidth * 2;
+  float: left;
+
+  // shadow under phone
+  &::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    height: $sideWidth * 2;
+    width: $screenWidth + $sideWidth * 4;
+    transform: translate($sideWidth * -1, $screenHeight + $topBottom - $sideWidth / 2);
+    z-index: -1;
+    border-radius: 100%;
+  }
+
+  .screen {
+    transform: translate($sideWidth, $topBottom / 2);
+    background: #222;
+    border-radius: 2px;
+    height: $screenHeight;
+    width: $screenWidth;
+
+    // speaker
+    &::before {
+      content: "";
+      position: absolute;
+      background: rgba(0, 0, 0, 0.2);
+      height: $sideWidth - 1;
+      width: $sideWidth * 2.5;
+      transform: translate($screenWidth / 2 - ($sideWidth + 1), $topBottom / -4 - 1);
+      border-radius: $sideWidth - 1;
+      z-index: 1;
+    }
+
+    // home button
+    &::after {
+      content: "";
+      position: absolute;
+      height: $sideWidth * 3 / 2;
+      width: $sideWidth * 3 / 2;
+      border: (1px * $scale) solid rgba(0, 0, 0, 0.2);
+      transform: translate($screenWidth / 2 - $sideWidth / 2, $topBottom / 4 - $sideWidth);
+      border-radius: 100%;
+      z-index: 1;
+    }
+
+    iframe {
+      overflow-y: scroll;
+      height: $screenHeight;
+      width: $screenWidth;
+    }
   }
 }
